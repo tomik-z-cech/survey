@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Tomas - School Project Survey</title>
 </head>
-<body>
+<body style="background-color: #ffc62c">
+  <div class="container">
+    <div class="text-center col-12">
   <h1>Tomas - School Project Survey</h1>
+    </div>
   <form method="post" action="{% url 'survey' %}">
     {% csrf_token %}
     {{ form | crispy }}
-    <button type="submit">Submit</button>
+    <div class="col-12 text-center">
+    <button type="submit" class="btn btn-success">Submit your answers</button>
+    </div>
   </form>
+</div>  
 </body>
 </html>

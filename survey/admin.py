@@ -9,5 +9,5 @@ class SurveyResponseAdmin(admin.ModelAdmin):
     Register Artists Admin
     """
 
-    list_display = ("name", "nationality", "item", "description")
+    list_display = ("name", "country_of_birth", "item", "description")
     list_filter = ("read",)
