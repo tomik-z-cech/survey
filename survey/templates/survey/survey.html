@@ -1,4 +1,5 @@
 {% load crispy_forms_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Tomas - School Project Survey</title>
 </head>
-<body style="background-color: #ffc62c">
-  <div class="container">
+<body  style="background: url('{% static "background-school.jpg" %}') no-repeat fixed top right / cover;">
+  <div class="container" style="background-color: rgba(255, 217, 33, 0.8); padding: 2vh;">
     <div class="text-center col-12">
   <h1>Tomas - School Project Survey</h1>
     </div>
@@ -16,7 +17,7 @@
     {% csrf_token %}
     {{ form | crispy }}
     <div class="col-12 text-center">
-    <button type="submit" class="btn btn-success">Submit your answers</button>
+    <button type="submit" class="btn btn-success">Submit your answer</button>
     </div>
   </form>
 </div>  
