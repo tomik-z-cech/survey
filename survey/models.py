@@ -3,10 +3,10 @@ from django.db import models
 
 class SurveyResponse(models.Model):
     name = models.CharField(max_length=255)
-    nationality = models.TextField()
+    nationality = models.CharField(max_length=255)
     item = models.CharField(max_length=255)
     description = models.TextField()
-    read = models.BooleanField()
+    read = models.BooleanField(default=False)
     ip_address = models.GenericIPAddressField()
 
     def __str__(self):

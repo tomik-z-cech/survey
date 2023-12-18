@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Tomas - School Project Survey</title>
 </head>
 <body>
-  <h1>Online Survey</h1>
+  <h1>Tomas - School Project Survey</h1>
   <form method="post" action="{% url 'survey' %}">
     {% csrf_token %}
     {{ form | crispy }}
