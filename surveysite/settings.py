@@ -35,21 +35,26 @@ from pathlib import Path
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
-    "localhost"
+    "localhost",
+    "tomas-survey-aa7a95bf8a08.herokuapp.com"
     ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'cloudinary',
-    'survey'
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.sites",
+    "cloudinary_storage",
+    "django.contrib.staticfiles",
+    "cloudinary",
+    "django_summernote",
+    "crispy_forms",
+    "survey"
 ]
 
 MIDDLEWARE = [
@@ -142,3 +147,6 @@ DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Crispy forms bootstrap pack
+CRISPY_TEMPLATE_PACK = "bootstrap4"
